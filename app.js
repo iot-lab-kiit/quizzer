@@ -2,14 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const bodyparser = require('body-parser');
-const path = require("path");
 const cors = require("cors");
 const http = require("http");
 require("dotenv/config");
 
 app.use(cors());
 app.use(bodyparser.json());
-app.use("/admin", express.static(path.join(__dirname, '/dashboard')));
 
 
 //Mongo DB
@@ -23,8 +21,15 @@ mongoose
     console.log("DB CONNECTED");
   });
 
+
+const quizRouter = require('./routes/quiz');
+const questionRouter = require('./routes/question');
+
+app.use("/api/quiz", quizRouter);
+app.use("/api/question", questionRouter);
+
 //Routes
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("server is live");
 });
 
