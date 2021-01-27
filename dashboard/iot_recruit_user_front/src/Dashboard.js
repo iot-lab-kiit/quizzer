@@ -199,7 +199,7 @@ const Dashboard = () =>{
 
                      
 
-                        <button type="button" class="col-md-4 mt-5 btn btn-sm btn-primary mr-3" data-toggle="modal" data-target="#modal-default">Start Test</button>
+                        <Link to="Questions"><button type="button" class="col-md-4 mt-5 btn btn-sm btn-primary mr-3" data-toggle="modal" data-target="#modal-default">Start Test</button></Link>
 
                             <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
