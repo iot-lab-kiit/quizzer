@@ -28,7 +28,20 @@ const Questions = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    {question.options == '' ? <div class="row">
+                            <div class="col-md-12 mt-2">
+                                <div class="card bg-primary shadow-soft rounded border  border-light">
+                                    <div class="card-body p-1">
+                                        <p>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea2"></label>
+                                                <textarea class="form-control" placeholder="Enter Your Answer" id="exampleFormControlTextarea2" rows="3"></textarea>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> : <div class="row">
                         <div class="col-md-12 mt-2">
                             <div class="card bg-primary shadow-soft rounded border  border-light">
                                 <div class="card-body p-5">
@@ -65,10 +78,10 @@ const Questions = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>}
                 </div>
             ))}
-            <div class="row mt-5">
+            {/* <div class="row mt-5">
                 <div class="col-md-12">
                     <div class="card bg-primary shadow-inset border-light">
                         <div class="card-body p-5">
@@ -93,7 +106,7 @@ const Questions = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div class="row mt-5 mb-5">
                 <div class="col-md-12">
